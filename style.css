@@ -117,18 +117,18 @@ body {
 
  .cart button {
     width: 100%;
-    padding: 1rem 1rem;
+    padding: 0.7rem 1rem;
     background: #000000;
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: bolder;
   }
   .cart button:hover {
     transition: 0.1s all ease-in-out;
     color: #fff;
-    background: #aaaaaae8;
+    background: #646464e8;
   }
 
   .purchase {
@@ -138,18 +138,18 @@ body {
   .purchase button {
     width: 100%;
     border: 1px solid #000000;
-    padding: 1rem 1rem;
+    padding: 0.7rem 1rem;
     background: #ffffff;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: bolder;
   }
 
   .purchase button:hover {
     transition: 0.1s all ease-in-out;
     color: rgb(0, 0, 0);
-    background: #dcdddde8;
+    background: #edeeeee8;
   }
 
 .sneaker {
