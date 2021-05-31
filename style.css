@@ -4,6 +4,11 @@
     box-sizing: border-box;
   }
 
+  .ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
 /* Body Styles */
 
 body {
@@ -13,12 +18,8 @@ body {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-  background: #c6ffdd; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #e99699); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #c6ffdd, #fbd786, #e99699); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-animation: Animation 5s ease infinite;
-    -moz-animation: Animation 5s ease infinite;
-    animation: Animation 5s ease infinite;
+  background: #ffffff; /* fallback for old browsers */
+
 }
 @-webkit-keyframes Animation {
     0%{background-position:10% 0%}
@@ -42,12 +43,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
+    
   }
   
   .card {
     transform-style: preserve-3d;
     background: #ffffff;
-    min-height: 89vh;
+    min-height: 88vh;
     width: 31rem;
     border-radius: 30px;
     padding: 0rem 5rem;
@@ -59,8 +62,8 @@ body {
     height: 12rem;
     background: linear-gradient(
       to right,
-      rgba(245, 70, 66, 0.75),
-      rgba(8, 83, 156, 0.75)
+      rgba(235, 103, 101, 0.75),
+      rgba(40, 117, 194, 0.75)
     );
     position: absolute;
     border-radius: 50%;
@@ -120,15 +123,18 @@ body {
     padding: 0.7rem 1rem;
     background: #000000;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     border-radius: 10px;
     font-weight: bolder;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
   }
   .cart button:hover {
     transition: 0.1s all ease-in-out;
     color: #fff;
-    background: #646464e8;
+    background-position: right center; /* change the direction of the change here */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 4px 5px 6px;
   }
 
   .purchase {
@@ -137,19 +143,22 @@ body {
   }
   .purchase button {
     width: 100%;
-    border: 1px solid #000000;
+    border: none;
     padding: 0.7rem 1rem;
     background: #ffffff;
     color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 10px;
     font-weight: bolder;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
   }
 
   .purchase button:hover {
     transition: 0.1s all ease-in-out;
-    color: rgb(0, 0, 0);
-    background: #edeeeee8;
+    color: rgb(255, 255, 255);
+    background-position: right center; /* change the direction of the change here */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 4px 5px 6px;
   }
 
 .sneaker {
@@ -163,3 +172,47 @@ body {
     z-index: 2;
     transition: all 0.75s ease-out;
   }
+
+  @keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h1 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0px 0px 0px;
+	}
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 5%);
+	}
+	.cover img {
+		height: 80%;
+	}
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
+}
